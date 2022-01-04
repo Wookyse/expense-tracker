@@ -3,7 +3,7 @@ import * as theme from './AllThemes/theme'
 
 export const Container = styled.div``
 
-export const Header = styled(theme.Dark)`
+export const Header = styled(theme.Beach)`
   height: 9.375rem;
   text-align: center;
 `
