@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as theme from '../../AllThemes/theme'
 
 export const Container = styled.div`
   background: #fff;
@@ -18,6 +19,7 @@ export const InputTitle = styled.div`
   font-weight: bold;
   margin-bottom: 5px;
 `
+
 export const Input = styled.input`
   width: 100%;
   height: 30px;
@@ -35,13 +37,12 @@ export const Select = styled.select`
   border-radius: 5px;
 `
 
-export const Button = styled.button`
+export const Button = styled(theme.DarkButton)`
   width: 100%;
   height: 30px;
   padding: 0 5px;
-  border: 1px solid lightblue;
+  border: 1px solid #000;
   border-radius: 5px;
-  background: lightblue;
-  color: black;
-  cursor: pointer;
+  cursor: pointer;''
+
 `

@@ -13,16 +13,46 @@ export const InputArea = ({ onAdd }: Props) => {
   const [titleField, setTitleField] = useState('')
   const [valueField, setValueField] = useState(0)
 
+  //Formater to BRL
+  // const formatValue = new Intl.NumberFormat('pt-br', {
+  //   style: 'currency',
+  //   currency: 'BRL'
+  // }).format(valueField)
+
   let categoryKeys: string[] = Object.keys(Categories)
 
   const handleAddEvent = () => {
-    let newItem: Item = {
-      date: new Date(dateField),
-      category: categoryField,
-      title: titleField,
-      value: valueField
+    let errors: string[] = []
+
+    if (isNaN(new Date(dateField).getTime())) {
+      errors.push('Data inválida!')
     }
-    onAdd(newItem)
+    if (!categoryKeys.includes(categoryField)) {
+      errors.push('Categoria inválida!')
+    }
+    if (titleField === '') {
+      errors.push('Título inválido!')
+    }
+    if (valueField <= 0) {
+      errors.push('Valor inválido!')
+    }
+    if (errors.length > 0) {
+      alert(errors.join('\n'))
+    } else {
+      onAdd({
+        date: new Date(dateField),
+        category: categoryField,
+        title: titleField,
+        value: valueField
+      })
+      clearFields()
+    }
+  }
+  const clearFields = () => {
+    setDateField('')
+    setCategoryField('')
+    setTitleField('')
+    setValueField(0)
   }
 
   return (
