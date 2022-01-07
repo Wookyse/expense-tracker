@@ -12,6 +12,8 @@ export const ResumeItem = ({ title, value, color }: Props) => {
     currency: 'BRL'
   }).format(value)
 
+  console.log(formatValue)
+
   return (
     <C.Container>
       <C.Title>{title}</C.Title>

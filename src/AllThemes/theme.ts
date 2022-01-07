@@ -23,24 +23,24 @@ export const Beach = styled.div`
 // TERMINAR DE CONSERTAR OS TEMAS ;;;;;
 //Header
 export const DkBlue = styled.div`
-  background: #2691a5;
-  color: greenyellow;
+  background: #144774;
+  color: #ffffff;
 `
 
 //Collor Main
 export const DkBlueMain = styled.div`
-  background: #ccc;
+  background: #6fadd2;
 `
 
 //Button
 export const DkBlueButton = styled.button`
-  background: #ccc;
-  color: black;
+  background: #6fadd2;
+  color: #fff;
   opacity: 1;
   transition: 0.3s;
   :hover {
     color: #fff;
-    background-color: #000;
+    background-color: #144774;
     opacity: 1;
   }
 `
@@ -63,7 +63,7 @@ export const DarkButton = styled.button`
   color: black;
   opacity: 1;
   transition: 0.3s;
-  :hover {
+  &:hover {
     color: #fff;
     background-color: #000;
     opacity: 1;

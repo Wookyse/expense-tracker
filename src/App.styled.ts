@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import * as theme from './AllThemes/theme'
 
-export const Container = styled(theme.DarkMainColor)``
+export const Container = styled(theme.DkBlueMain)``
 
-export const Header = styled(theme.DarkHeader)`
+export const Header = styled(theme.DkBlue)`
   height: 9.375rem;
   text-align: center;
 `

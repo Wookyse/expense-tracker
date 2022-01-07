@@ -37,7 +37,7 @@ export const Select = styled.select`
   border-radius: 5px;
 `
 
-export const Button = styled(theme.DarkButton)`
+export const Button = styled(theme.DkBlueButton)`
   width: 100%;
   height: 30px;
   padding: 0 5px;
