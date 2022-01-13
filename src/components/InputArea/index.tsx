@@ -2,6 +2,7 @@ import * as C from './styles'
 import { Item } from '../../types/Item'
 import { useState } from 'react'
 import { Categories } from '../../data/Categories'
+import * as yup from 'yup'
 
 type Props = {
   onAdd: (item: Item) => void
@@ -20,6 +21,15 @@ export const InputArea = ({ onAdd }: Props) => {
   // }).format(valueField)
 
   let categoryKeys: string[] = Object.keys(Categories)
+
+  let schema = yup.object().shape({
+    titleField: yup.string().required('Título inválido!'),
+    valueField: yup.number().required('Valor inválido!').positive().integer(),
+    categoryField: yup.string().required('Categoria inválida!'),
+    dateField: yup.date().default(function () {
+      return new Date()
+    })
+  })
 
   const handleAddEvent = () => {
     let errors: string[] = []
